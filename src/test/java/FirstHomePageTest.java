@@ -1,3 +1,4 @@
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -8,10 +9,10 @@ import org.testng.annotations.Test;
 public class FirstHomePageTest extends BaseTest {
 
     private HomePage homePage;
-    private String browser;
 
     @BeforeClass
-    public void setup(String browser){
+    @Parameters({"firefox"})
+    public void setup() {
         homePage = new HomePage(driver);
     }
 

@@ -19,7 +19,7 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
-        else if (browser.equalsIgnoreCase("firefox ")) {
+        else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
@@ -27,7 +27,7 @@ public class BaseTest {
     }
 
     @AfterClass
-    public void teardown(String browser) {
+    public void teardown() {
         driver.quit();
         System.out.println("Test Completed");
     }

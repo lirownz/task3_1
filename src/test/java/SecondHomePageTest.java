@@ -2,10 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
 public class SecondHomePageTest extends BaseTest {
@@ -13,6 +10,7 @@ public class SecondHomePageTest extends BaseTest {
     private HomePage homePage;
 
     @BeforeClass
+    @Parameters({"chrome"})
     public void setup() {
         homePage = new HomePage(driver);
     }
