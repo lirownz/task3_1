@@ -1,6 +1,3 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -10,7 +7,6 @@ public class SecondHomePageTest extends BaseTest {
     private HomePage homePage;
 
     @BeforeClass
-    @Parameters({"chrome"})
     public void setup() {
         homePage = new HomePage(driver);
     }

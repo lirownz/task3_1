@@ -3,15 +3,17 @@
 
 <suite name="All Test Suite">
 
-    <parameter name="browser" value="firefox"/>
+
     <test verbose="2" preserve-order="true" name="parameter1">
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="FirstHomePageTest"/>
         </classes>
     </test>
 
-    <parameter name="browser" value="chrome"/>
+
     <test verbose="2" preserve-order="true" name="parameter2">
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="SecondHomePageTest"/>
         </classes>

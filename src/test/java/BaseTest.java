@@ -15,11 +15,11 @@ public class BaseTest {
     @BeforeClass
     @Parameters({"browser"})
     public void setup(String browser) {
-        if (browser.equalsIgnoreCase("chrome")) {
+        if (browser.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
-        else if (browser.equalsIgnoreCase("firefox")) {
+        else if (browser.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
